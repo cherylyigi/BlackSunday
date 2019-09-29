@@ -8,9 +8,13 @@ namespace Character.Player
 {
     public class Player : MonoBehaviour 
     {
-        string name = "Yigi";
-        bool wetHand = true;
+        bool isWash = false;
+        bool isDry = false;
 
-        public bool getHand() { return wetHand; }
+        public bool IsWash() { return isWash; }
+        public bool IsDry() { return isDry; }
+
+        public void WashHand() {isWash=true; }
+        public void DryHand() {isWash=true; }
     }
 }

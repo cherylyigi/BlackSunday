@@ -7,10 +7,11 @@ public class Colleague : Human
 {
     string Name = "???";
     string Dialogue = "What What What???";
+    public UpdateCanvas canvas;
 
     public override void react()
     {
-        print(Dialogue);
+        canvas.DisplayCanvas(Dialogue);
     }
 
 }
