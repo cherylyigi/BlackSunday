@@ -32,7 +32,7 @@ public class CameraController : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                yspeed = superSpeed;
+                yspeed = -1 * superSpeed;
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
@@ -40,7 +40,7 @@ public class CameraController : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-                yspeed = -1 * superSpeed;
+                yspeed =  superSpeed;
             }
 
         }
@@ -52,7 +52,7 @@ public class CameraController : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                yspeed = normalSpeed;
+                yspeed = -1 * normalSpeed;
             }
             else if (Input.GetKey(KeyCode.DownArrow))
             {
@@ -60,7 +60,7 @@ public class CameraController : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
-                yspeed = -1 * normalSpeed;
+                yspeed = normalSpeed;
             }
 
         }
