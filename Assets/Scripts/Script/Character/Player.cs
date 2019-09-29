@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.AI;
 using Objects.MyObject;
 
-public class Player : MonoBehaviour 
+namespace Character.Player
 {
-    string name = "Yigi";
-    
+    public class Player : MonoBehaviour 
+    {
+        string name = "Yigi";
+        bool wetHand = true;
+
+        public bool getHand() { return wetHand; }
+    }
 }
