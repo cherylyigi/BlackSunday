@@ -8,6 +8,7 @@ TagManager:
   - ElevatorNumericButton
   - ElevatorGoButton
   - Elevator
+  - Door
   layers:
   - Default
   - TransparentFX
