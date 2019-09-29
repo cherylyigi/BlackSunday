@@ -7,9 +7,17 @@ public class Mover : MonoBehaviour
 {
 	[SerializeField] Transform t;
 
-	// Update is called once per frame
-	void Update()
-	{
+    private void Start()
+    {
         GetComponent<NavMeshAgent>().destination = t.position;
+    }
+    // Update is called once per frame
+    void Update()
+	{
+        Vector3 currPos = this.transform.position;
+        if (Vector3.Distance(currPos, t.position) < 0.5f)
+        {
+            GetComponent<Animator>().SetFloat("Blend", 1.0f);
+        }
     }
 }
