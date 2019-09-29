@@ -99,16 +99,6 @@ public class PlayerController : MonoBehaviour
         isGrounded = true;
     }*/
 
-    private void MoveToCursor()
-    {
-        RaycastHit hit;
-        bool hasHit = Physics.Raycast(GetMouseRay(), out hit);
-        if (hasHit && Input.GetMouseButton(0))
-        {
-            GetComponent<Mover>().MoveTo(hit.point);
-        }
-    }
-
     private Ray GetMouseRay() 
     {
         return Camera.main.ScreenPointToRay(Input.mousePosition);

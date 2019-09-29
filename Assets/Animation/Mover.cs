@@ -5,11 +5,11 @@ using UnityEngine.AI;
 
 public class Mover : MonoBehaviour
 {
-	[SerializeField] Transform target;
+	[SerializeField] Transform t;
 
 	// Update is called once per frame
 	void Update()
 	{
-        GetComponent<NavMeshAgent>().destination = target.position;
+        GetComponent<NavMeshAgent>().destination = t.position;
     }
 }
