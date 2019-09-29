@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using Objects.MyObject;
 
-public class Urinal : MyObject
+public class Sink : MyObject
 {
-    string name = "Urinal";
+    string name = "Sink";
 
     // Update is called once per frame
     public override void react()
     {
-        print("It is awful. Somebody didn't flush it.");
+        print("I feel so dizzy....... Ehh the icy water makes me feel better.");
     }
 }

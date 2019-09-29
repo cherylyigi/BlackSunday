@@ -36,7 +36,7 @@ public class Waterpool : MyObject
         double MyLength_squa = GetComponent<MeshRenderer>().bounds.size.x / 1.4;
         MyLength_squa *= MyLength_squa;
         bool step = (Xdiff_squa + Zdiff_squa < MyLength_squa);
-        Debug.Log(Xdiff_squa + " " + Zdiff_squa + " " + MyLength_squa);
+        //Debug.Log(Xdiff_squa + " " + Zdiff_squa + " " + MyLength_squa);
         return step;
     }
 
