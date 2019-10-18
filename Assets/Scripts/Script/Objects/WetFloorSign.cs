@@ -8,6 +8,6 @@ public class WetFloorSign : MyObject
     // Update is called once per frame
     public override void react()
     {
-        print("\"Wet floor, \n  watch out your step\"");
+        canvas.DisplayCanvas("\"Wet floor, \n  watch out your step\"");
     }
 }

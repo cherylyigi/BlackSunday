@@ -10,8 +10,12 @@ namespace Objects.MyObject {
         [SerializeField] public Transform target;
         [SerializeField] public Textbox text;
 
+        public UpdateCanvas canvas;
+        [TextArea(5, 10)]
+        public string[] sentences;
+
         public virtual void react() {
-            print("This is an Object");
+
         }
     }
 }

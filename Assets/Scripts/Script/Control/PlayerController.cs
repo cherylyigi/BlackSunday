@@ -111,10 +111,28 @@ public class PlayerController : MonoBehaviour
         MyObject Yeah;
         if (hasHit)
         {
-            if (Yeah = hit.transform.GetComponent<MyObject>()) {
-                Yeah.react();
+            if(hit.transform.GetComponent<MyObject>()) {
+                Debug.Log("OO");
+                if (within(hit)) { hit.transform.GetComponent<MyObject>().react(); }
             }
+            //if (Yeah = hit.transform.GetComponent<MyObject>()) {
+            //    Debug.Log("click");
+              //  Yeah.react();
+            //}
         }
+    }
+
+    private bool within(RaycastHit hit) {
+        float PlayerX = transform.position.x;
+        float PlayerY = transform.position.x;
+        float PlayerZ = transform.position.z;
+        float ObjectX = hit.transform.position.x;
+        float ObjectY = hit.transform.position.x;
+        float ObjectZ = hit.transform.position.z;
+        float Xdiff_squa = (PlayerX - ObjectX) * (PlayerX - ObjectX);
+        float Ydiff_squa = (PlayerY - ObjectY) * (PlayerY - ObjectY);
+        float Zdiff_squa = (PlayerZ - ObjectZ) * (PlayerZ - ObjectZ);
+        return Xdiff_squa + Ydiff_squa + Zdiff_squa <= 16;
     }
     
 }

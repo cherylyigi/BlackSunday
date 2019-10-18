@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Objects.MyObject;
+using UnityEngine.SceneManagement;
 
 public class Waterpool : MyObject
 {
     //string name = "Waterpool";
     int tolerance = 30;
+    private bool showBefore = false;
 
     void Update() {
         react();
@@ -15,12 +17,14 @@ public class Waterpool : MyObject
 
     public override void react()
     {
-        if (stepOn())
+        if (stepOn() && !showBefore)
         {
             if(tolerance > 0) { tolerance--; }
             else 
             {
-                Debug.Log("You die");
+                showBefore = true;
+                //canvas.DisplayCanvas("It says wet floor, why did I waste my life?");
+                SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings-1);
             }
         }
     }
